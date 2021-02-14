@@ -11,5 +11,6 @@ namespace EFCoreSample.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
