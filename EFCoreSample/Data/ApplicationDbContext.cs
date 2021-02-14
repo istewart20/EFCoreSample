@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EFCoreSample.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreSample.Data
 {
@@ -7,5 +8,7 @@ namespace EFCoreSample.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }
