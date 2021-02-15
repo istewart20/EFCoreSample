@@ -15,5 +15,11 @@ namespace EFCoreSample.Data
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<BookDetail> BookDetails { get; set; }
+        public DbSet<BookAuthor> BookAuthors { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<BookAuthor>().HasKey(x => new { x.BookId, x.AuthorId });
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCoreSample.Models
@@ -28,5 +29,7 @@ namespace EFCoreSample.Models
         [ForeignKey("Publisher")]
         public int PropertyId { get; set; }
         public Publisher Publisher { get; set; }
+
+        public virtual ICollection<BookAuthor> BookAuthor { get; set; }
     }
 }
