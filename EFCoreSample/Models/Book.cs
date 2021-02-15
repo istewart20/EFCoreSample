@@ -16,5 +16,13 @@ namespace EFCoreSample.Models
         public double Price { get; set; }
         [NotMapped]
         public double DiscountedPrice { get; set; }
+
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+
+        [ForeignKey("BookDetail")]
+        public int BookDetailId { get; set; }
+        public BookDetail BookDetail { get; set; }
     }
 }
