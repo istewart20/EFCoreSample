@@ -24,5 +24,9 @@ namespace EFCoreSample.Models
         [ForeignKey("BookDetail")]
         public int BookDetailId { get; set; }
         public BookDetail BookDetail { get; set; }
+
+        [ForeignKey("Publisher")]
+        public int PropertyId { get; set; }
+        public Publisher Publisher { get; set; }
     }
 }

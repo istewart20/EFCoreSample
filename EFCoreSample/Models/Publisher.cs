@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCoreSample.Models
 {
@@ -10,5 +11,6 @@ namespace EFCoreSample.Models
         public string Name { get; set; }
         [Required]
         public string Location { get; set; }
+        public List<Book> Books { get; set; }
     }
 }
